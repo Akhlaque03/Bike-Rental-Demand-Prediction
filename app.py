@@ -386,20 +386,20 @@ scenario_df = pd.DataFrame({
         "Rush Hour"
     ],
     "Value": [
-        hr,
-        mnth,
-        weekday,
-        temp,
-        atemp,
-        hum,
-        windspeed,
-        season,
-        yr,
-        holiday,
-        workingday,
-        weathersit,
-        rush_hour
-    ]
+    str(hr),
+    str(mnth),
+    str(weekday),
+    str(temp),
+    str(atemp),
+    str(hum),
+    str(windspeed),
+    str(season),
+    str(yr),
+    str(holiday),
+    str(workingday),
+    str(weathersit),
+    str(rush_hour)
+]
 })
 
 # st.dataframe(
