@@ -255,13 +255,13 @@ streamlit run app.py
 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author
+---
+      **Akhlaque Alam**
 
-   *   Akhlaque Alam
-
-        *  Data Science Enthusiast
-        *  Python | SQL | Machine Learning | Streamlit
-        *  Open to Data Science and Machine Learning opportunities.
+           * Data Science Enthusiast
+           * Python | SQL | Machine Learning | Streamlit
+           * Open to Data Science and Machine Learning opportunities.
 
 ---
 
