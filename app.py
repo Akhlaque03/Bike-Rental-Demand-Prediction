@@ -346,26 +346,29 @@ st.divider()
 
 
 # Model Performance Before Hyperparameter Tuning
-# st.subheader("Baseline Model Comparison")
+st.dataframe(comparison_df)
+st.subheader("Baseline Model Comparison")
 
-# st.dataframe(
-#     comparison_df.sort_values(
-#         by='R2_Score',
-#         ascending=False
-#     ),
-#     use_container_width=True
-# )
+st.dataframe(
+    comparison_df.sort_values(
+        by='R2_Score',
+        ascending=False
+    ),
+    use_container_width=True
+)
 
 # Model Performance After Hyperparameter Tuning
 st.subheader("Model Performance After Hyperparameter Tuning")
 
-# st.dataframe(
-#     tuning_comparison_df.sort_values(
-#         by='R2_Score',
-#         ascending=False
-#     ),
-#     use_container_width=True
-# )
+st.dataframe(tuning_comparison_df)
+
+st.dataframe(
+    tuning_comparison_df.sort_values(
+        by='R2_Score',
+        ascending=False
+    ),
+    use_container_width=True
+)
 
 # SELECTED Bike Rental SCENARIO
 st.subheader("Selected Bike Rental Scenario")
@@ -402,6 +405,9 @@ scenario_df = pd.DataFrame({
 ]
 })
 
+
+
+st.dataframe(scenario_df)
 st.dataframe(
     scenario_df.astype(str),
     use_container_width=True
