@@ -346,8 +346,8 @@ st.divider()
 
 
 # Model Performance Before Hyperparameter Tuning
-st.dataframe(comparison_df)
 st.subheader("Baseline Model Comparison")
+comparison_df = comparison_df.astype(str)
 
 st.dataframe(
     comparison_df.sort_values(
@@ -360,8 +360,7 @@ st.dataframe(
 # Model Performance After Hyperparameter Tuning
 st.subheader("Model Performance After Hyperparameter Tuning")
 
-st.dataframe(tuning_comparison_df)
-
+tuning_comparison_df = tuning_comparison_df.astype(str)
 st.dataframe(
     tuning_comparison_df.sort_values(
         by='R2_Score',
@@ -406,8 +405,7 @@ scenario_df = pd.DataFrame({
 })
 
 
-
-st.dataframe(scenario_df)
+scenario_df = scenario_df.astype(str)
 st.dataframe(
     scenario_df.astype(str),
     use_container_width=True
