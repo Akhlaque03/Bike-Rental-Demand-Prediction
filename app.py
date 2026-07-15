@@ -11,7 +11,7 @@ st.set_page_config(
     layout = 'wide'
 )
 
-Load Model
+# Load Model
 model = joblib.load("catboost_final_model.pkl")
 feature_columns = joblib.load("feature_columns.pkl")
 
