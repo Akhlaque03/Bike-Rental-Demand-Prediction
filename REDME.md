@@ -256,11 +256,12 @@ streamlit run app.py
 ---
 
 👨‍💻 Author
-   Akhlaque Alam
 
-   *  Data Science Enthusiast
-   *  Python | SQL | Machine Learning | Streamlit
-   *  Open to Data Science and Machine Learning opportunities.
+   *   Akhlaque Alam
+
+        *  Data Science Enthusiast
+        *  Python | SQL | Machine Learning | Streamlit
+        *  Open to Data Science and Machine Learning opportunities.
 
 ---
 
