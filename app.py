@@ -12,6 +12,10 @@ st.set_page_config(
 # Load Model
 model = joblib.load("catboost_final_model.pkl")
 feature_columns = joblib.load("feature_columns.pkl")
+try:
+    model.set_params(thread_count=1)
+except:
+    pass
 
 
 
