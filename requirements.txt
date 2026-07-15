@@ -8,3 +8,4 @@ lightgbm==4.6.0
 matplotlib==3.10.3
 seaborn==0.13.2
 joblib==1.5.1
+pyarrow==17.0.0
