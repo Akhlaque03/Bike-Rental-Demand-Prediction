@@ -256,7 +256,7 @@ streamlit run app.py
 ---
 
 ## 👨‍💻 Author
----
+
       **Akhlaque Alam**
 
            * Data Science Enthusiast
