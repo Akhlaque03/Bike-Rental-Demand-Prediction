@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import joblib
 
-st.write("App Started")
+
 
 # Page Configuration
 st.set_page_config(
@@ -11,13 +11,11 @@ st.set_page_config(
     layout = 'wide'
 )
 
-# Load Model
-# model = joblib.load("catboost_final_model.pkl")
-# feature_columns = joblib.load("feature_columns.pkl")
+Load Model
+model = joblib.load("catboost_final_model.pkl")
+feature_columns = joblib.load("feature_columns.pkl")
 
 
-model = None
-feature_columns = []
 
 
 
