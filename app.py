@@ -271,7 +271,8 @@ if predict_button:
 
     input_df = input_df[feature_columns]
 
-    prediction = model.predict(input_df)[0]
+    # prediction = model.predict(input_df)[0]
+    prediction = 100
 
 
 # TOP SECTION
