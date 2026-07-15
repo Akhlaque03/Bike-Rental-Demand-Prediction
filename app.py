@@ -1,9 +1,6 @@
-from catboost import CatBoostRegressor
 import pandas as pd
 import streamlit as st
 import joblib
-
-
 
 # Page Configuration
 st.set_page_config(
@@ -13,11 +10,8 @@ st.set_page_config(
 )
 
 # Load Model
-# model = joblib.load("catboost_final_model.pkl")
-# feature_columns = joblib.load("feature_columns.pkl")
-
-
-
+model = joblib.load("catboost_final_model.pkl")
+feature_columns = joblib.load("feature_columns.pkl")
 
 
 
@@ -277,10 +271,7 @@ if predict_button:
 
     input_df = input_df[feature_columns]
 
-    # prediction = model.predict(input_df)[0]
-    st.write(input_df)
-    prediction = 100
-
+    prediction = model.predict(input_df)[0]
 
 
 # TOP SECTION
@@ -364,53 +355,53 @@ st.dataframe(
     use_container_width=True
 )
 
-# # Model Performance After Hyperparameter Tuning
-# st.subheader("Model Performance After Hyperparameter Tuning")
+# Model Performance After Hyperparameter Tuning
+st.subheader("Model Performance After Hyperparameter Tuning")
 
-# st.dataframe(
-#     tuning_comparison_df.sort_values(
-#         by='R2_Score',
-#         ascending=False
-#     ),
-#     use_container_width=True
-# )
+st.dataframe(
+    tuning_comparison_df.sort_values(
+        by='R2_Score',
+        ascending=False
+    ),
+    use_container_width=True
+)
 
 # SELECTED Bike Rental SCENARIO
-# st.subheader("Selected Bike Rental Scenario")
-# scenario_df = pd.DataFrame({
-#     "Feature": [
-#         "Hours",
-#         "Month",
-#         "Week Day",
-#         "Temperature",
-#         "Feels Like Temp",
-#         "Humidity",
-#         "Wind Speed",
-#         "Season",
-#         "Year",
-#         "Holiday",
-#         "Working Day",
-#         "Weather",
-#         "Rush Hour"
-#     ],
-#     "Value": [
-#         hr,
-#         mnth,
-#         weekday,
-#         temp,
-#         atemp,
-#         hum,
-#         windspeed,
-#         season,
-#         yr,
-#         holiday,
-#         workingday,
-#         weathersit,
-#         rush_hour
-#     ]
-# })
+st.subheader("Selected Bike Rental Scenario")
+scenario_df = pd.DataFrame({
+    "Feature": [
+        "Hours",
+        "Month",
+        "Week Day",
+        "Temperature",
+        "Feels Like Temp",
+        "Humidity",
+        "Wind Speed",
+        "Season",
+        "Year",
+        "Holiday",
+        "Working Day",
+        "Weather",
+        "Rush Hour"
+    ],
+    "Value": [
+        hr,
+        mnth,
+        weekday,
+        temp,
+        atemp,
+        hum,
+        windspeed,
+        season,
+        yr,
+        holiday,
+        workingday,
+        weathersit,
+        rush_hour
+    ]
+})
 
-# st.dataframe(
-#     scenario_df.astype(str),
-#     use_container_width=True
-# )
+st.dataframe(
+    scenario_df,
+    use_container_width=True
+)
