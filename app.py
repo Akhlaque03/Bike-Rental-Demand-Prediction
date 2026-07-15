@@ -10,8 +10,8 @@ st.set_page_config(
 )
 
 # Load Model
-model = joblib.load("catboost_final_model.pkl")
-feature_columns = joblib.load("feature_columns.pkl")
+# model = joblib.load("catboost_final_model.pkl")
+# feature_columns = joblib.load("feature_columns.pkl")
 
 
 
@@ -225,53 +225,54 @@ tuning_comparison_df = pd.DataFrame({
 
 # DEFAULT VALUES
 prediction = None
+prediction = 100
 
 # Prediction Button
-if predict_button:
+# if predict_button:
 
-    input_data = {
-    "hr": hr,
-    "weekday": weekday,
-    "temp": temp,
-    "atemp": atemp,
-    "hum": hum,
-    "windspeed": windspeed,
+#     input_data = {
+#     "hr": hr,
+#     "weekday": weekday,
+#     "temp": temp,
+#     "atemp": atemp,
+#     "hum": hum,
+#     "windspeed": windspeed,
 
-    "season_springer": 1 if season == "springer" else 0,
-    "season_summer": 1 if season == "summer" else 0,
-    "season_winter": 1 if season == "winter" else 0,
+#     "season_springer": 1 if season == "springer" else 0,
+#     "season_summer": 1 if season == "summer" else 0,
+#     "season_winter": 1 if season == "winter" else 0,
 
-    "yr_2012": 1 if yr == 2012 else 0,
+#     "yr_2012": 1 if yr == 2012 else 0,
 
-    "holiday_Yes": 1 if holiday == "Yes" else 0,
+#     "holiday_Yes": 1 if holiday == "Yes" else 0,
 
-    "workingday_Working Day": 1 if workingday == "Working Day" else 0,
+#     "workingday_Working Day": 1 if workingday == "Working Day" else 0,
 
-    "weathersit_Heavy Rain": 1 if weathersit == "Heavy Rain" else 0,
-    "weathersit_Light Snow": 1 if weathersit == "Light Snow" else 0,
-    "weathersit_Mist": 1 if weathersit == "Mist" else 0,
+#     "weathersit_Heavy Rain": 1 if weathersit == "Heavy Rain" else 0,
+#     "weathersit_Light Snow": 1 if weathersit == "Light Snow" else 0,
+#     "weathersit_Mist": 1 if weathersit == "Mist" else 0,
 
-    "rush_hour_Rush Hour": 1 if rush_hour == "Rush Hour" else 0,
+#     "rush_hour_Rush Hour": 1 if rush_hour == "Rush Hour" else 0,
 
-    "mnth_2.0": 1 if mnth == 2 else 0,
-    "mnth_3.0": 1 if mnth == 3 else 0,
-    "mnth_4.0": 1 if mnth == 4 else 0,
-    "mnth_5.0": 1 if mnth == 5 else 0,
-    "mnth_6.0": 1 if mnth == 6 else 0,
-    "mnth_7.0": 1 if mnth == 7 else 0,
-    "mnth_8.0": 1 if mnth == 8 else 0,
-    "mnth_9.0": 1 if mnth == 9 else 0,
-    "mnth_10.0": 1 if mnth == 10 else 0,
-    "mnth_11.0": 1 if mnth == 11 else 0,
-    "mnth_12.0": 1 if mnth == 12 else 0
-    }
+#     "mnth_2.0": 1 if mnth == 2 else 0,
+#     "mnth_3.0": 1 if mnth == 3 else 0,
+#     "mnth_4.0": 1 if mnth == 4 else 0,
+#     "mnth_5.0": 1 if mnth == 5 else 0,
+#     "mnth_6.0": 1 if mnth == 6 else 0,
+#     "mnth_7.0": 1 if mnth == 7 else 0,
+#     "mnth_8.0": 1 if mnth == 8 else 0,
+#     "mnth_9.0": 1 if mnth == 9 else 0,
+#     "mnth_10.0": 1 if mnth == 10 else 0,
+#     "mnth_11.0": 1 if mnth == 11 else 0,
+#     "mnth_12.0": 1 if mnth == 12 else 0
+#     }
 
 
-    input_df = pd.DataFrame([input_data])
+#     input_df = pd.DataFrame([input_data])
 
-    input_df = input_df[feature_columns]
+#     input_df = input_df[feature_columns]
 
-    prediction = model.predict(input_df)[0]
+#     prediction = model.predict(input_df)[0]
 
 
 # TOP SECTION
@@ -347,24 +348,24 @@ st.divider()
 # Model Performance Before Hyperparameter Tuning
 st.subheader("Baseline Model Comparison")
 
-st.dataframe(
-    comparison_df.sort_values(
-        by='R2_Score',
-        ascending=False
-    ),
-    use_container_width=True
-)
+# st.dataframe(
+#     comparison_df.sort_values(
+#         by='R2_Score',
+#         ascending=False
+#     ),
+#     use_container_width=True
+# )
 
 # Model Performance After Hyperparameter Tuning
 st.subheader("Model Performance After Hyperparameter Tuning")
 
-st.dataframe(
-    tuning_comparison_df.sort_values(
-        by='R2_Score',
-        ascending=False
-    ),
-    use_container_width=True
-)
+# st.dataframe(
+#     tuning_comparison_df.sort_values(
+#         by='R2_Score',
+#         ascending=False
+#     ),
+#     use_container_width=True
+# )
 
 # SELECTED Bike Rental SCENARIO
 st.subheader("Selected Bike Rental Scenario")
@@ -401,7 +402,7 @@ scenario_df = pd.DataFrame({
     ]
 })
 
-st.dataframe(
-    scenario_df,
-    use_container_width=True
-)
+# st.dataframe(
+#     scenario_df,
+#     use_container_width=True
+# )
