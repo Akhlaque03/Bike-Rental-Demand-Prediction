@@ -12,8 +12,8 @@ st.set_page_config(
 )
 
 # Load Model
-model = joblib.load("catboost_final_model.pkl")
-feature_columns = joblib.load("feature_columns.pkl")
+# model = joblib.load("catboost_final_model.pkl")
+# feature_columns = joblib.load("feature_columns.pkl")
 
 
 
