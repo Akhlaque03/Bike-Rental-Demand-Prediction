@@ -402,6 +402,6 @@ scenario_df = pd.DataFrame({
 })
 
 st.dataframe(
-    scenario_df,
+    scenario_df.astype(str),
     use_container_width=True
 )
