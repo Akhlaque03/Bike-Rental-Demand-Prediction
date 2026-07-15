@@ -2,6 +2,8 @@ import pandas as pd
 import streamlit as st
 import joblib
 
+st.write("App Started")
+
 # Page Configuration
 st.set_page_config(
     page_title = "Bike Rental Demand Prediction",
@@ -10,8 +12,12 @@ st.set_page_config(
 )
 
 # Load Model
-model = joblib.load("catboost_final_model.pkl")
-feature_columns = joblib.load("feature_columns.pkl")
+# model = joblib.load("catboost_final_model.pkl")
+# feature_columns = joblib.load("feature_columns.pkl")
+
+
+model = None
+feature_columns = []
 
 
 
