@@ -12,11 +12,9 @@ st.set_page_config(
 )
 
 # Load Model
-# model = joblib.load("catboost_final_model.pkl")
-# feature_columns = joblib.load("feature_columns.pkl")
+model = joblib.load("catboost_final_model.pkl")
+feature_columns = joblib.load("feature_columns.pkl")
 
-model = "test"
-feature_columns = []
 
 
 
@@ -278,8 +276,8 @@ if predict_button:
 
     input_df = input_df[feature_columns]
 
-    # prediction = model.predict(input_df)[0]
-    prediction = 0
+    prediction = model.predict(input_df)[0]
+    # prediction = 0
 
 
 # TOP SECTION
