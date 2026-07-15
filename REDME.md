@@ -1,10 +1,22 @@
 # 🚲 Bike Rental Demand Prediction
 
-A Machine Learning Regression project that predicts the expected hourly bike rental demand based on weather conditions, seasonal patterns, and time-related features.
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Regression-orange)
+![Streamlit](https://img.shields.io/badge/Deployment-Streamlit-red)
+![CatBoost](https://img.shields.io/badge/Model-CatBoost-green)
 
+An End-to-End Machine Learning Regression Project to predict hourly bike rental demand using weather conditions, seasonal patterns, and time-based features.
+
+🚀 **Live Demo:** https://akhlaque03-bike-rental-demand-predictor.streamlit.app/
+
+##  Overview
+
+This project focuses on building a complete Machine Learning pipeline, from data preprocessing and exploratory analysis to model optimization and deployment.
+
+The final model, **Hyperparameter Tuned CatBoost Regressor**, is deployed using Streamlit to provide real-time bike rental demand predictions.
 ---
 
-# 📌 Project Overview
+#  Project Overview
 
 Bike Rental Demand Prediction is an end-to-end Machine Learning Regression project developed to estimate the number of bikes expected to be rented in a given hour.
 
@@ -22,7 +34,7 @@ The final application enables users to predict bike rental demand interactively 
 
 ---
 
-# 🎯 Project Objectives
+#  Project Objectives
 
 * Predict hourly bike rental demand accurately.
 * Compare multiple regression algorithms.
@@ -103,47 +115,54 @@ The following regression algorithms were trained and evaluated:
 
 # 📈 Baseline Model Comparison
 
-| Model             | R² Score |
-| ----------------- | -------: |
-| CatBoost          |   0.9535 |
-| XGBoost           |   0.9513 |
-| LightGBM          |   0.9484 |
-| Random Forest     |   0.9465 |
-| Decision Tree     |   0.8935 |
-| Gradient Boosting |   0.8628 |
-| KNN Regressor     |   0.8053 |
-| Linear Regression |   0.5860 |
-| SVM Regressor     |   0.5554 |
-
+| Model | R² Score |
+| ------------------------- | -------: |
+| CatBoost Regressor | 0.9535 |
+| XGBoost Regressor | 0.9513 |
+| LightGBM Regressor | 0.9484 |
+| Random Forest Regressor | 0.9465 |
+| Decision Tree Regressor | 0.8935 |
+| Gradient Boosting Regressor | 0.8628 |
+| KNN Regressor | 0.8053 |
+| Linear Regression | 0.5860 |
+| Support Vector Regressor (SVR) | 0.5554 |
 ---
 
 # ⚙ Hyperparameter Tuning
 
-Hyperparameter tuning was performed using **RandomizedSearchCV** to improve model accuracy.
+## ⚙ Hyperparameter Tuning
+
+To improve model performance, hyperparameter optimization was performed using **RandomizedSearchCV** with cross-validation.
 
 ### Tuned Models
 
-* CatBoost Regressor
-* XGBoost Regressor
-* LightGBM Regressor
-* Random Forest Regressor
+The following regression models were optimized:
+
+- CatBoost Regressor
+- XGBoost Regressor
+- LightGBM Regressor
+- Random Forest Regressor
+
+The tuned models achieved better generalization performance compared to baseline models.
 
 ---
 
-# 🏆 Best Performing Model
+## 🏆 Best Performing Model
 
-**CatBoost Regressor (Hyperparameter Tuned)**
+The final selected model is:
 
----
+### 🥇 CatBoost Regressor (Hyperparameter Tuned)
 
-# 📊 Final Model Performance
+CatBoost achieved the best performance among all evaluated regression models after hyperparameter optimization.
 
-| Metric   |     Score |
-| -------- | --------: |
-| MAE      |   21.9912 |
-| MSE      | 1280.1439 |
-| RMSE     |   35.7791 |
-| R² Score |    0.9596 |
+### Final Performance
+
+| Metric | Score |
+|---|---:|
+| MAE | 21.9912 |
+| MSE | 1280.1439 |
+| RMSE | 35.7791 |
+| R² Score | 0.9596 |
 
 ---
 
@@ -215,20 +234,28 @@ Bike-Rental-Demand-Prediction/
 
 ---
 
-# 🛠 Technologies Used
+##  Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* CatBoost
-* XGBoost
-* LightGBM
-* Matplotlib
-* Seaborn
-* Streamlit
-* Joblib
+### Programming & Data Processing
+- Python
+- Pandas
+- NumPy
 
+### Data Visualization
+- Matplotlib
+- Seaborn
+
+### Machine Learning
+- Scikit-learn
+- CatBoost
+- XGBoost
+- LightGBM
+
+### Deployment & Tools
+- Streamlit
+- Joblib
+- Jupyter Notebook
+- GitHub
 ---
 
 # 🚀 Installation
@@ -245,13 +272,15 @@ streamlit run app.py
 
 ---
 
-# 🔮 Future Enhancements
+## 🔮 Future Enhancements
 
-* Real-Time Weather API Integration
-* Cloud Deployment
-* Interactive Dashboard
-* Advanced Feature Engineering
-* Automated Model Monitoring
+Potential improvements for this project:
+
+- 🌦️ Real-Time Weather API Integration
+- 📊 Advanced Interactive Dashboard
+- ⚙️ Automated Model Retraining Pipeline
+- 📈 Model Monitoring and Performance Tracking
+- 🚀 CI/CD Pipeline Integration
 
 ---
 
@@ -259,9 +288,17 @@ streamlit run app.py
 
 **Akhlaque Alam**
 
-* Data Science Enthusiast
-* Python | SQL | Machine Learning | Streamlit
-* Open to Data Science and Machine Learning opportunities.
+Data Science Enthusiast with hands-on experience in:
+
+- Python
+- SQL
+- Machine Learning
+- Data Analysis
+- Streamlit Deployment
+
+Passionate about building machine learning solutions and developing data-driven applications.
+
+Open to Data Science and Machine Learning opportunities.
 
 ---
 
