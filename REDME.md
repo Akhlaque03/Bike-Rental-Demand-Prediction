@@ -4,6 +4,7 @@
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Regression-orange)
 ![Streamlit](https://img.shields.io/badge/Deployment-Streamlit-red)
 ![CatBoost](https://img.shields.io/badge/Model-CatBoost-green)
+![License](https://img.shields.io/badge/License-MIT-purple)
 
 An End-to-End Machine Learning Regression Project to predict hourly bike rental demand using weather conditions, seasonal patterns, and time-based features.
 
