@@ -129,7 +129,6 @@ The following regression algorithms were trained and evaluated:
 | Support Vector Regressor (SVR) | 0.5554 |
 ---
 
-# ⚙ Hyperparameter Tuning
 
 ## ⚙ Hyperparameter Tuning
 
